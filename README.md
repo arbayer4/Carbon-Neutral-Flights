@@ -36,26 +36,19 @@ View [Wireframe Mock-Up](https://wireframe.cc/IM9yaq).
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
-
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Departure and arrival search box for User.
+- Checkbox if flight is roundtrip
+- Utilize third-party API to pull carbon footprint data from flight.
+- Render carbon footprint data to page, including price of the carbon offset, and link to purchase offsets
+- Include graphic of air-travel environmental impacts.
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
-
-- Add second API
-- Use local storage to save user favorites
+- Add second API that could add useful travel information about the destination city. 
+- CSS/Javascript Animation-maybe showing airplane taking off and landing when user submits. Another
+  animation could be a random number generator for bringing up the price of the offset.
 
 ## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
 |  Day | Deliverable | Status
 |---|---| ---|
@@ -68,7 +61,6 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
 
 ## Timeframes
 
