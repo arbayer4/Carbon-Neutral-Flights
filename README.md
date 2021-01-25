@@ -1,8 +1,7 @@
 # Project Overview
 
-## Project Name
+## The Green Travel Planner
 
-The name of your project.
 
 ## Project Description
 
