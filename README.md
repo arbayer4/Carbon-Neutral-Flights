@@ -32,7 +32,7 @@ Use this section to describe your final project and perhaps any links to relevan
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+View [Wireframe Mock-Up](https://wireframe.cc/IM9yaq).
 
 ### MVP/PostMVP
 
