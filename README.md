@@ -10,7 +10,26 @@ Use this section to describe your final project and perhaps any links to relevan
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+```json
+{
+    "footprint": 600,
+    "offset_prices": [
+        {
+            "amount": 2400,
+            "currency": "SEK",
+            "offset_url": "https://www.goclimate.com/se/flight_offsets/new?offset_params=economy%2CIND%2CSFO",
+            "locale": "sv-SE"
+        },
+        {
+            "amount": 290,
+            "currency": "USD",
+            "offset_url": "https://www.goclimate.com/us/flight_offsets/new?offset_params=economy%2CIND%2CSFO",
+            "locale": "en-US"
+        }
+    ],
+    "details_url": "https://www.goclimate.com/se/flight_offsets/new?offset_params=economy%2CIND%2CSFO"
+}
+```
 
 ## Wireframes
 
