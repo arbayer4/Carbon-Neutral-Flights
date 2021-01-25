@@ -60,6 +60,8 @@ View [Wireframe Mock-Up](https://wireframe.cc/IM9yaq).
 |Feb 1| Presentations/Project Submission | Incomplete
 
 ## Priority Matrix
+![priority_matrix](./)
+
 
 
 ## Timeframes
