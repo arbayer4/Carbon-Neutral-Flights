@@ -4,8 +4,10 @@
 
 
 ## Project Description
-
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This application will be a flight travel companion for environmentally concious travelers. The user will be 
+able to enter their trip details (departure, arrival airports, roundtrip, etc) and the app will display the
+carbon footprint implications of this flight and a cost to buy offsets for the pollution - with a link that 
+the user can immediately take to buy the carbon offsets.
 
 ## API and Data Sample
 
@@ -66,15 +68,21 @@ View [Wireframe Mock-Up](https://wireframe.cc/IM9yaq).
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Basic HTML Setup | H | 2hr|  |  |
+| API Endpoint exploration | H |3hrs |  |  |
+|PseudoCode Javascript Functions|M|1.5hrs|||
+|Initial CSS Styling|H|2hrs|||
+|JS Code to Access API and Add Dynamic Results|H|3 Hrs|||
+|Flexbox|H|3hrs|||
+|CSS Polishing-Fonts, Colors, Etc|M|4hrs|||
+|Media Query Dynamic Content|M|3hrs|||
+|JS/CSS Animation|L|4hrs|||
+|Testing, Bug Fixing Etc|M|2hrs|||
+|Second API Call|L|4hrs|||
+| Total | H | 31.5hrs| 0hrs | 0hrs |
 
 ## Code Snippet
 
