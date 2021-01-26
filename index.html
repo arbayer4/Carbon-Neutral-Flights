@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script defer src="./app.js"></script>
+  <title>Document</title>
+</head>
+
+
+<body>
+  <header>
+    <h1>The Green Travel Companion</h1>
+    
+    
+  </header>
+  
+  <form action="">
+    <input type="text" id="departure" name="departure" placeholder="ex. SFO"><br>
+    <label for="departure">Departure IATA Code</label><br>
+    <input type="text" name="arrival" id="arrival" placeholder="ex. FCO"><br>
+    <label for="arrival">Arrival IATA Code</label><br>
+    <label for="roundtrip">Roundtrip?</label>
+    <input type="checkbox" name="roundrip" id="roundtrip" value="true">
+    <input type="submit" id="get-carbon">
+  </form>
+  <div id="carbon-data"></div>
+
+</body>
+
+</html>
