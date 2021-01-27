@@ -10,7 +10,9 @@ form.addEventListener('submit', (e) => {
   // console.log(arr)
   let rt = document.querySelector('#roundtrip').checked
   // console.log(rt)
+  takeOff()
   getCarbonData(dep, arr, rt)
+
 
 })
 
@@ -43,11 +45,11 @@ form.addEventListener('submit', (e) => {
 
 async function getCarbonData(dep, dest, rt) {
   let oneWay = `&segments[0][origin]=${dep}&segments[0][destination]=${dest}`
-  let roundTrip= ``
+  let roundTrip = ``
   if (rt) {
-    roundTrip += `&segments[1][origin]=${dest}&segments[1][destination]=${dep}`  
+    roundTrip += `&segments[1][origin]=${dest}&segments[1][destination]=${dep}`
   }
-  
+
   let cabinCurrency = `&cabin_class=economy&currencies[]=USD`
   var config = {
     method: 'get',
@@ -64,7 +66,7 @@ async function getCarbonData(dep, dest, rt) {
     let footprint = response.data.footprint
     console.log(footprint)
     let cost = response.data.offset_prices[0].amount
-    cost = (cost/100).toFixed(2)
+    cost = (cost / 100).toFixed(2)
     console.log(cost)
     let buyOffset = response.data.offset_prices[0].offset_url
     console.log(buyOffset)
@@ -85,7 +87,27 @@ function appendCarbonData(weight, cost, url) {
   dataContainer.insertAdjacentHTML('beforeend', pollutionInfo)
 }
 
+function takeOff() {
+  let plane = document.querySelector('#plane');
+  let start = Date.now();
+  let left = 54
+  let top = 320
+  let x = 0
+  let timer = setInterval(() => {
 
+    let timePassed = Date.now() - start;
+    if (timePassed >= 2000) {
+      clearInterval(timer);
+      return;
+    }
+    plane.style.left = `${left += 4}px`
+    if (left > 200) {
+      plane.style.top = `${top -= (3/4)*x**2}px`
+
+    }
+  }, 20)
+  x++;
+}
 
 
 

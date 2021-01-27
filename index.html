@@ -12,23 +12,47 @@
 
 
 <body>
+  <div id="flex-container">
   <header>
-    <h1>The Green Travel Companion</h1>
-    
+    <nav>
+      <ul id="navbar">
+        <li class="nav"><a href="#navbar">Home</a></li>
+        <li class="nav"><a href="#form">Emissions Calculator</a></li>
+      </ul>
+    </nav>
+    <img src="https://i.imgur.com/gAImuBO.jpg?1" alt="background" class="background">
+    <h1>The Carbon Neutral Traveler</h1>
+    <h4 id="subheader">Travel the world, save the planet.</h4>
     
   </header>
   
-  <form action="">
-    <input type="text" id="departure" name="departure" placeholder="ex. SFO"><br>
-    <label for="departure">Departure IATA Code</label><br>
-    <input type="text" name="arrival" id="arrival" placeholder="ex. FCO"><br>
-    <label for="arrival">Arrival IATA Code</label><br>
+  <form id="form">
+    <img src="https://i.imgur.com/jiIpo5A.png" alt="plane" id="plane">
+    <input type="text" id="departure" name="departure" class="textbox" placeholder="ex. SFO"><br>
+    <label for="departure" class="label">Departure IATA Code</label><br>
+    <input type="text" name="arrival" id="arrival" class="textbox" placeholder="ex. FCO"><br>
+    <label for="arrival" class="label">Arrival IATA Code</label><br>
     <label for="roundtrip">Roundtrip?</label>
     <input type="checkbox" name="roundrip" id="roundtrip" value="true">
     <input type="submit" id="get-carbon">
   </form>
   <div id="carbon-data"></div>
+  <h2 id="why">Why Buy Offsets</h2>
+  <p>Lorem Ipsum is simply dummy text of the printing and 
+    typesetting industry. Lorem Ipsum has been the industry's 
+    standard dummy text ever since the 1500s, when an unknown 
+    printer took a galley of type and scrambled it to make a type 
+    specimen book. It has survived not only five centuries, 
+    but also the leap into electronic typesetting, 
+    remaining essentially unchanged. It was popularised 
+    in the 1960s with the release of Letraset sheets containing 
+    Lorem Ipsum passages, and more recently with desktop publishing 
+    software like Aldus PageMaker including versions of Lorem Ipsum.
+    <br><br><br><br><br><br><br> Lets just see what it looks like as
+    i scroll down the PageMaker
 
+  </p>
+</div>
 </body>
 
 </html>
