@@ -5,19 +5,21 @@ body {
   width: 100%;
   height: auto;
 }
-ul{
+
+.navbar{
   position: fixed;
-  top: -12;
+  top: 0px;
+  left: 0px;
   width: 100%;
   background-color: rgba(0,0,0, .5);
 }
-.nav {
-  display: inline;
+.navbar a {
   padding: 10px ;
   text-align: right;
   color: aliceblue;
 }
 a {
+  padding: 10px
   color: inherit;
   text-decoration: none;
 }
@@ -45,7 +47,7 @@ h1 {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 70px;
+  top: 100px;
   left: 0px;
 }
 form {
@@ -64,10 +66,14 @@ form {
   flex-basis: 100%;
 }
 #plane {
-  position: absolute;
-  top: 320px;
-  left: 54px;
+  position: relative;
+  top: 0px;
+  left: 0px;
   max-width: 30px;
   max-height: auto;
 
+}
+#plane-landing {
+  max-width: 30px;
+  max-height: auto;
 }

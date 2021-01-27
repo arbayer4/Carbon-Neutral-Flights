@@ -4,15 +4,18 @@ const form = document.querySelector('form')
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  let dep = document.querySelector('#departure').value
-  // console.log(dep)
-  let arr = document.querySelector('#arrival').value
-  // console.log(arr)
-  let rt = document.querySelector('#roundtrip').checked
-  // console.log(rt)
-  takeOff()
-  getCarbonData(dep, arr, rt)
-
+  let dep = document.querySelector('#departure')
+  let depCaps = dep.value.toUpperCase()
+  dep.value = ''
+  let arr = document.querySelector('#arrival')
+  let arrCaps = arr.value.toUpperCase()
+  arr.value = ``
+  let box = document.querySelector('#roundtrip')
+  let rt = box.checked
+  box.checked=false
+  
+  getCarbonData(depCaps, arrCaps, rt)
+takeOff()
 
 })
 
@@ -72,7 +75,7 @@ async function getCarbonData(dep, dest, rt) {
     console.log(buyOffset)
     appendCarbonData(footprint, cost, buyOffset)
   } catch (error) {
-    console.error(error);
+    console.error('Im in the error loop');
   }
 }
 
@@ -90,21 +93,36 @@ function appendCarbonData(weight, cost, url) {
 function takeOff() {
   let plane = document.querySelector('#plane');
   let start = Date.now();
-  let left = 54
-  let top = 320
+  let left = 0
+  let top = 0
+  let resetLeft = -400
+  let resetTop = -100
   let x = 0
+  let xReset = 0
   let timer = setInterval(() => {
 
     let timePassed = Date.now() - start;
-    if (timePassed >= 2000) {
+    if (timePassed >= 8000 || resetLeft>=0) {
       clearInterval(timer);
+      plane.style.left = `0px`
+      plane.style.top = `0px`
       return;
-    }
-    plane.style.left = `${left += 4}px`
-    if (left > 200) {
-      plane.style.top = `${top -= (3/4)*x**2}px`
+    } else if (timePassed>=4000){
+      plane.style.left = `${resetLeft += 4}px`
+      if (resetTop<0) {
+        plane.style.top = `${resetTop += 1.5 * x ** 2}px`
+      } else {
+        plane.style.top = `0px`
+      }
+      xReset++
+    }else {
+      plane.style.left = `${left += 4}px`
+      if (left > 200) {
+        plane.style.top = `${top -= (3 / 4) * x ** 2}px`
 
+      }
     }
+
   }, 20)
   x++;
 }
