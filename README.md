@@ -77,7 +77,7 @@ View [Wireframe Mock-Up](https://wireframe.cc/IM9yaq).
 |Initial CSS Styling|H|2hrs|1||
 |JS Code to Access API and Add Dynamic Results|H|3 Hrs|2||
 |Flexbox|H|3hrs|3||
-|CSS Polishing-Fonts, Colors, Etc|M|4hrs|5||
+|CSS Polishing-Fonts, Colors, Etc|M|4hrs|8||
 |Media Query Dynamic Content|M|3hrs|1||
 |JS/CSS Animation|L|4hrs|2||
 |Testing, Bug Fixing Etc|M|2hrs|||
