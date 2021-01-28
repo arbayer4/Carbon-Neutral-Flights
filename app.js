@@ -92,11 +92,13 @@ function appendCarbonData(weight, cost, url) {
 
 function takeOff() {
   let plane = document.querySelector('#plane');
+  let domRect = plane.getBoundingClientRect()
+  let bound = window.innerWidth - domRect.left
   let start = Date.now();
   let left = 0
   let top = 0
-  let resetLeft = -400
-  let resetTop = -100
+  let resetLeft = -domRect.right
+  let resetTop = -50
   let x = 0
   let xReset = 0
   let timer = setInterval(() => {
@@ -107,7 +109,7 @@ function takeOff() {
       plane.style.left = `0px`
       plane.style.top = `0px`
       return;
-    } else if (timePassed>=4000){
+    } else if (left > bound){
       plane.style.left = `${resetLeft += 4}px`
       if (resetTop<0) {
         plane.style.top = `${resetTop += 1.5 * x ** 2}px`

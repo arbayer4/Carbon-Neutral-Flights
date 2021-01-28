@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="./app.js"></script>
-  <title>Document</title>
+  <title>Carbon Neutral Traveler</title>
 </head>
 
 
@@ -17,15 +19,18 @@
     <div class="navbar">
       <a href="#top">Home</a>
       <a href="#form">Emissions Calculator</a>
+      <a href="#blog">Why?</a>
+      <a href="#footer">Connect</a>
     </div>
-    <img src="https://i.imgur.com/gAImuBO.jpg?1" alt="background" class="background">
+    <!-- <img src="https://i.imgur.com/gAImuBO.jpg?1" alt="background" class="background"> -->
     <!-- <img src="https://i.imgur.com/3qhBB0p.jpg" alt="background" class="background"> -->
+    <br><br><br>
     <h1>The Carbon Neutral Traveler</h1>
-    <h4 id="subheader">Travel the world, save the planet.</h4>
+    <h4 id="subheader">Travel the world, protect the planet.</h4>
+    <p class="trees"><img src="https://i.imgur.com/yNdweLo.png?1" id="trees"></p>
   </header>
-  <h2>Offset Your Flight Emissions</h2>
-  <div id="flex-container">
     <form id="form">
+      <h2>Offset Your Flight Emissions</h2>
       <img src="https://i.imgur.com/Y9dZxhB.png" alt="plane" id="plane">
       <input type="text" id="departure" name="departure" class="textbox" placeholder="ex. SFO"><br>
       <label for="departure" class="label">Departure IATA Code</label><br>
@@ -37,8 +42,8 @@
       <input type="submit" id="get-carbon">
     </form>
     <div id="carbon-data"></div>
-    <h2 id="why">Why Buy Offsets</h2>
-    <p>Lorem Ipsum is simply dummy text of the printing and
+    <h2 id="blog">Why Buy Offsets</h2>
+    <p class="body">Lorem Ipsum is simply dummy text of the printing and
       typesetting industry. Lorem Ipsum has been the industry's
       standard dummy text ever since the 1500s, when an unknown
       printer took a galley of type and scrambled it to make a type
@@ -52,7 +57,15 @@
       i scroll down the PageMaker
 
     </p>
-  </div>
+  <footer id="footer">
+    <a href="https://github.com/arbayer4" class="social"><img src="https://i.imgur.com/ySkVGPG.png?1" alt="git"
+        class="social"></a><a href="https://www.linkedin.com/in/andy-bayer-203"><img src="" alt="linkedin"></a>
+    <p class="footer">© Andy Bayer 2021</p>
+
+  </footer>
+
+
+
 </body>
 
 </html>
