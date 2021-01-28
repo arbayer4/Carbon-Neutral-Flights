@@ -72,7 +72,7 @@ View [Wireframe Mock-Up](https://wireframe.cc/IM9yaq).
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Basic HTML Setup | H | 2hr| 1 |  |
-| API Endpoint exploration | H |3hrs |2.75  |  |
+| API Endpoint exploration | H |3hrs |3.5  |  |
 |PseudoCode Javascript Functions|M|1.5hrs|30min||
 |Initial CSS Styling|H|2hrs|1||
 |JS Code to Access API and Add Dynamic Results|H|3 Hrs|2||
