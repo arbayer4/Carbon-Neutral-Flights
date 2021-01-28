@@ -54,11 +54,11 @@ View [Wireframe Mock-Up](https://wireframe.cc/IM9yaq).
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Jan 26| Project Approval | Incomplete
-|Jan 27| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Jan 28| Initial Clickable Model  | Incomplete
-|Jan 29| MVP | Incomplete
+|Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|Jan 26| Project Approval | Complete
+|Jan 27| Core Application Structure (HTML, CSS, etc.) | Complete
+|Jan 28| Initial Clickable Model  | Complete
+|Jan 29| MVP | Complete
 |Feb 1| Presentations/Project Submission | Incomplete
 
 ## Priority Matrix
@@ -75,14 +75,14 @@ View [Wireframe Mock-Up](https://wireframe.cc/IM9yaq).
 | API Endpoint exploration | H |3hrs |3.5  |  |
 |PseudoCode Javascript Functions|M|1.5hrs|30min||
 |Initial CSS Styling|H|2hrs|1||
-|JS Code to Access API and Add Dynamic Results|H|3 Hrs|2||
-|Flexbox|H|3hrs|3||
-|CSS Polishing-Fonts, Colors, Etc|M|4hrs|8||
-|Media Query Dynamic Content|M|3hrs|1||
-|JS/CSS Animation|L|4hrs|2||
+|JS Code to Access API and Add Dynamic Results|H|3hrs|2hrs||
+|Flexbox|H|3hrs|3hrs||
+|CSS Polishing-Fonts, Colors, Etc|M|4hrs|8hrs||
+|Media Query Dynamic Content|M|3hrs|1hrs||
+|JS/CSS Animation|L|4hrs|2hrs||
 |Testing, Bug Fixing Etc|M|2hrs|||
 |Second API Call|L|4hrs|||
-| Total | H | 31.5hrs| 0hrs | 0hrs |
+| Total | H | 31.5hrs| 22hrs | 0hrs |
 
 ## Code Snippet
 
