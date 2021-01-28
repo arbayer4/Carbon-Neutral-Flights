@@ -30,8 +30,8 @@ a {
   align-items: center;
 }
 header {
-  flex-basis: 110%;
-  margin: -22px -25px 10px -10px;
+  flex-basis: 100%;
+  /* margin: -22px -25px 10px -10px; */
 }
 h1 {
   color: #495057;
@@ -43,7 +43,7 @@ h1 {
   
 }
 #subheader {
-  color:#6c757d;
+  color:#588157;
   position: absolute;
   width: 100%;
   text-align: center;
@@ -54,7 +54,8 @@ form {
   width: 200px;
   border: 5px solid black;
   border-radius: 15px;
-  padding: 50px 75px
+  padding: 50px 75px;
+  margin: 20px;
 }
 .textbox{
   margin: 10px 5px 5px 5px;
@@ -64,6 +65,13 @@ form {
 }
 #why {
   flex-basis: 100%;
+  align-self: flex-start;
+  margin: 30px;
+
+}
+p {
+  margin: 30px;
+  padding: 5px;
 }
 #plane {
   position: relative;

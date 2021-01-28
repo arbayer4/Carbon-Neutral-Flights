@@ -85,7 +85,7 @@ function appendCarbonData(weight, cost, url) {
   <h3>Offset Cost: $${cost}</h3>
   <a href="${url}">Buy Offset Now!</a>
   `
-  let dataContainer = document.querySelector('#carbon-data')
+  let dataContainer = document.querySelector('#form')
 
   dataContainer.insertAdjacentHTML('beforeend', pollutionInfo)
 }
