@@ -74,12 +74,12 @@ View [Wireframe Mock-Up](https://wireframe.cc/IM9yaq).
 | Basic HTML Setup | H | 2hr| 1 |  |
 | API Endpoint exploration | H |3hrs |2.75  |  |
 |PseudoCode Javascript Functions|M|1.5hrs|30min||
-|Initial CSS Styling|H|2hrs|30 mins||
-|JS Code to Access API and Add Dynamic Results|H|3 Hrs|1.5||
-|Flexbox|H|3hrs|||
-|CSS Polishing-Fonts, Colors, Etc|M|4hrs|||
-|Media Query Dynamic Content|M|3hrs|||
-|JS/CSS Animation|L|4hrs|||
+|Initial CSS Styling|H|2hrs|1||
+|JS Code to Access API and Add Dynamic Results|H|3 Hrs|2||
+|Flexbox|H|3hrs|3||
+|CSS Polishing-Fonts, Colors, Etc|M|4hrs|5||
+|Media Query Dynamic Content|M|3hrs|1||
+|JS/CSS Animation|L|4hrs|2||
 |Testing, Bug Fixing Etc|M|2hrs|||
 |Second API Call|L|4hrs|||
 | Total | H | 31.5hrs| 0hrs | 0hrs |
