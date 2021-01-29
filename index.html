@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="./app.js"></script>
@@ -29,37 +29,45 @@
     <h4 id="subheader">Travel the world, protect the planet.</h4>
     <p class="trees"><img src="https://i.imgur.com/yNdweLo.png?1" id="trees"></p>
   </header>
-    <form id="form">
-      <h2>Offset Your Flight Emissions</h2>
-      <img src="https://i.imgur.com/Y9dZxhB.png" alt="plane" id="plane">
-      <input type="text" id="departure" name="departure" class="textbox" placeholder="ex. SFO"><br>
-      <label for="departure" class="label">Departure IATA Code</label><br>
-      <img src="https://i.imgur.com/k3X9WJt.png" alt="plane-landing" id="plane-landing">
-      <input type="text" name="arrival" id="arrival" class="textbox" placeholder="ex. FCO"><br>
-      <label for="arrival" class="label">Arrival IATA Code</label><br>
-      <label for="roundtrip">Roundtrip?</label>
-      <input type="checkbox" name="roundrip" id="roundtrip" value="true">
-      <input type="submit" id="get-carbon">
-    </form>
-    <div id="carbon-data"></div>
+  <form id="form">
+    <h2>Offset Your Flight Emissions</h2>
+    <img src="https://i.imgur.com/Y9dZxhB.png" alt="plane" id="plane">
+    <input type="text" id="departure" name="departure" class="textbox" placeholder="ex. SFO"><br>
+    <label for="departure" class="label">Departure IATA Code</label><br>
+    <img src="https://i.imgur.com/k3X9WJt.png" alt="plane-landing" id="plane-landing">
+    <input type="text" name="arrival" id="arrival" class="textbox" placeholder="ex. FCO"><br>
+    <label for="arrival" class="label">Arrival IATA Code</label><br>
+    <label for="roundtrip">Roundtrip?</label>
+    <input type="checkbox" name="roundrip" id="roundtrip" value="true">
+    <input type="submit" id="get-carbon">
+  </form>
+  <div id="carbon-data"></div>
+
+  <article>
     <h2 id="blog">Why Buy Offsets</h2>
+    <img src="https://i.imgur.com/CH0x4Rx.png" alt="footprint-graph" id="graph">
     <p class="body">Lorem Ipsum is simply dummy text of the printing and
       typesetting industry. Lorem Ipsum has been the industry's
       standard dummy text ever since the 1500s, when an unknown
       printer took a galley of type and scrambled it to make a type
       specimen book. It has survived not only five centuries,
       but also the leap into electronic typesetting,
+      <img src="https://i.imgur.com/rkNiyia.jpg" alt="global-CO2" id="nasa">
       remaining essentially unchanged. It was popularised
       in the 1960s with the release of Letraset sheets containing
       Lorem Ipsum passages, and more recently with desktop publishing
-      software like Aldus PageMaker including versions of Lorem Ipsum.
-      <br><br><br><br><br><br><br> Lets just see what it looks like as
-      i scroll down the PageMaker
+      software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      
+  </article>
 
-    </p>
+  </p>
   <footer id="footer">
-    <a href="https://github.com/arbayer4" class="social"><img src="https://i.imgur.com/ySkVGPG.png?1" alt="git"
-        class="social"></a><a href="https://www.linkedin.com/in/andy-bayer-203"><img src="" alt="linkedin"></a>
+    <a href="https://github.com/arbayer4" class="social">
+      <img src="https://i.imgur.com/ySkVGPG.png?1" alt="git" class="social">
+    </a>
+    <a href="https://www.linkedin.com/in/andy-bayer-203">
+      <img src="https://i.imgur.com/kVtlRVa.png" alt="linkedin" class="social">
+    </a>
     <p class="footer">© Andy Bayer 2021</p>
 
   </footer>

@@ -12,10 +12,10 @@ form.addEventListener('submit', (e) => {
   arr.value = ``
   let box = document.querySelector('#roundtrip')
   let rt = box.checked
-  box.checked=false
-  
+  box.checked = false
+  removeCarbonData()
   getCarbonData(depCaps, arrCaps, rt)
-takeOff()
+  takeOff()
 
 })
 
@@ -65,15 +65,16 @@ async function getCarbonData(dep, dest, rt) {
   };
   try {
     let response = await axios(config)
-    console.log(response.data)
+    // console.log(response.data)
     let footprint = response.data.footprint
-    console.log(footprint)
+    // console.log(footprint)
     let cost = response.data.offset_prices[0].amount
     cost = (cost / 100).toFixed(2)
-    console.log(cost)
+    // console.log(cost)
     let buyOffset = response.data.offset_prices[0].offset_url
-    console.log(buyOffset)
+    // console.log(buyOffset)
     appendCarbonData(footprint, cost, buyOffset)
+    removeCarbonData()
   } catch (error) {
     console.error('Im in the error loop');
   }
@@ -81,15 +82,25 @@ async function getCarbonData(dep, dest, rt) {
 
 function appendCarbonData(weight, cost, url) {
   let pollutionInfo = `
+  <div id = "carbon-data">
   <h3>Carbon Footprint: ${weight}kg</h3>
   <h3>Offset Cost: $${cost}</h3>
   <a href="${url}">Buy Offset Now!</a>
+  </div>
   `
   let dataContainer = document.querySelector('#form')
 
   dataContainer.insertAdjacentHTML('beforeend', pollutionInfo)
 }
+function removeCarbonData() {
+  let parent = document.querySelector('#carbon-data')
+  // console.log(parent.firstElementChild)
+  while (parent.firstElementChild) {
+    parent.removeChild(parent.firstElementChild)
 
+  }
+  return
+}
 function takeOff() {
   let plane = document.querySelector('#plane');
   let domRect = plane.getBoundingClientRect()
@@ -104,20 +115,20 @@ function takeOff() {
   let timer = setInterval(() => {
 
     let timePassed = Date.now() - start;
-    if (timePassed >= 8000 || resetLeft>=0) {
+    if (timePassed >= 8000 || resetLeft >= 0) {
       clearInterval(timer);
       plane.style.left = `0px`
       plane.style.top = `0px`
       return;
-    } else if (left > bound){
+    } else if (left > bound) {
       plane.style.left = `${resetLeft += 4}px`
-      if (resetTop<0) {
+      if (resetTop < 0) {
         plane.style.top = `${resetTop += 1.5 * x ** 2}px`
       } else {
         plane.style.top = `0px`
       }
       xReset++
-    }else {
+    } else {
       plane.style.left = `${left += 4}px`
       if (left > 200) {
         plane.style.top = `${top -= (3 / 4) * x ** 2}px`

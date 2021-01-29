@@ -4,6 +4,7 @@
   width: 100%;
   padding: 0;
   margin:0;
+  /* overflow-x: hidden; */
 } 
  body {
   background-color:#fefae0;
@@ -101,9 +102,28 @@ h2 {
   margin: 30px;
 
 }
+article{
+  width: 85%;
+  align-self: center;
+}
 p.body {
   margin: 30px;
   padding: 5px;
+  text-align: justify;
+}
+p image {
+  margin: 25px;
+}
+#graph {
+  float: right;
+  width: 35%;
+  height: auto;
+}
+#nasa {
+  float: left;
+  width: 50%;
+  height: auto;
+  margin: 10px 10px 10px -10px;
 }
 #plane {
   position: relative;
@@ -111,6 +131,7 @@ p.body {
   left: 0px;
   max-width: 30px;
   max-height: auto;
+  overflow-x: hidden;
 
 }
 #plane-landing {
