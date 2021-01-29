@@ -13,10 +13,16 @@ form.addEventListener('submit', (e) => {
   let box = document.querySelector('#roundtrip')
   let rt = box.checked
   box.checked = false
-  removeCarbonData()
-  getCarbonData(depCaps, arrCaps, rt)
-  takeOff()
-
+  if (!depCaps || !arrCaps) {
+    removeData()
+    appendErrorData()
+  } else {
+    console.log("test")
+    removeData()
+    loadingCircle()
+    getCarbonData(depCaps, arrCaps, rt)
+    takeOff()
+  }
 })
 
 
@@ -59,10 +65,11 @@ async function getCarbonData(dep, dest, rt) {
     url: `https://cors-anywhere.herokuapp.com/https://api.goclimate.com/v1/flight_footprint?user=0a03f81a6b2ac87829e10c4a` + oneWay + roundTrip + cabinCurrency,
     headers: {
       'Authorization': 'Basic MGEwM2Y4MWE2YjJhYzg3ODI5ZTEwYzRhOg==',
-      'Content-Type': 'application/x-www-form-urlencoded'
-
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Access-Control-Allow-Origin': '*'
     }
-  };
+  }
+  console.log(config.url)
   try {
     let response = await axios(config)
     // console.log(response.data)
@@ -73,10 +80,11 @@ async function getCarbonData(dep, dest, rt) {
     // console.log(cost)
     let buyOffset = response.data.offset_prices[0].offset_url
     // console.log(buyOffset)
+    removeLoadingCircle()
     appendCarbonData(footprint, cost, buyOffset)
   } catch (error) {
     appendErrorData()
-    console.error('Im in the error loop');
+    console.error(error);
   }
 }
 
@@ -90,7 +98,7 @@ function appendCarbonData(weight, cost, url) {
 
   dataContainer.insertAdjacentHTML('beforeend', pollutionInfo)
 }
-function removeCarbonData() {
+function removeData() {
   let parent = document.querySelector('#carbon-data')
   // console.log(parent.firstElementChild)
   while (parent.firstElementChild) {
@@ -108,6 +116,20 @@ function appendErrorData() {
   let dataContainer = document.querySelector('#carbon-data')
   dataContainer.insertAdjacentHTML('beforeend', errorInfo)
 
+}
+//Loading circle code from https://dev.to/vaishnavme/displaying-loading-animation-on-fetch-api-calls-1e5m
+function loadingCircle() {
+  console.log("in loading loop")
+  const loading = document.querySelector("#loading-circle");
+  console.log(loading)
+  loading.classList.add("display");
+  setTimeout(() => {
+    loading.classList.remove("display");
+  }, 5000);
+}
+function removeLoadingCircle() {
+  const loading = document.querySelector("#loading-circle");
+  loading.classList.remove("display")
 }
 function takeOff() {
   let plane = document.querySelector('#plane');
