@@ -88,6 +88,44 @@ View [Wireframe Mock-Up](https://wireframe.cc/IM9yaq).
 
 
 ```
+function takeOff() {
+  let plane = document.querySelector('#plane');
+  let domRect = plane.getBoundingClientRect()
+  let bound = window.innerWidth - domRect.left
+  let start = Date.now();
+  let left = 0
+  let top = 0
+  let resetLeft = -domRect.right
+  let resetTop = -50
+  let x = 0
+  let xReset = 0
+  let timer = setInterval(() => {
+
+    let timePassed = Date.now() - start;
+    if (timePassed >= 8000 || resetLeft >= 0) {
+      clearInterval(timer);
+      plane.style.left = `0px`
+      plane.style.top = `0px`
+      return;
+    } else if (left > bound) {
+      plane.style.left = `${resetLeft += 4}px`
+      if (resetTop < 0) {
+        plane.style.top = `${resetTop += 1.5 * x ** 2}px`
+      } else {
+        plane.style.top = `0px`
+      }
+      xReset++
+    } else {
+      plane.style.left = `${left += 4}px`
+      if (left > 200) {
+        plane.style.top = `${top -= (3 / 4) * x ** 2}px`
+
+      }
+    }
+
+  }, 20)
+  x++;
+}
 
 ```
 
