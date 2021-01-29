@@ -25,6 +25,17 @@ form.addEventListener('submit', (e) => {
   }
 })
 
+const menu = document.querySelector(".icon")
+menu.addEventListener('click', (e) => {
+  e.preventDefault();
+  let x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+  
+})
 
 // API Setup
 // let dep = 'LAX'
@@ -92,7 +103,7 @@ function appendCarbonData(weight, cost, url) {
   let pollutionInfo = `
   <h3>Carbon Footprint: ${weight}kg</h3>
   <h3>Offset Cost: $${cost}</h3>
-  <a href="${url}">Buy Offset Now!</a>
+  <a href="${url}" target="_blank">Buy Offset Now!</a>
   `
   let dataContainer = document.querySelector('#carbon-data')
 
@@ -110,7 +121,7 @@ function removeData() {
 function appendErrorData() {
   let errorInfo = `
   <h3>Error, Airport Codes Not Found</h3>
-  <p>Please visit<a id = "error-a"href="https://www.iata.org/en/publications/directories/code-search/">IATA</a>website to find your
+  <p>Please visit<a id = "error-a" href="https://www.iata.org/en/publications/directories/code-search/" target="_blank">IATA</a>website to find your
   cities code. </p>
   `
   let dataContainer = document.querySelector('#carbon-data')
