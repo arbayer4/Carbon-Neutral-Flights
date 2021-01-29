@@ -74,7 +74,6 @@ async function getCarbonData(dep, dest, rt) {
     let buyOffset = response.data.offset_prices[0].offset_url
     // console.log(buyOffset)
     appendCarbonData(footprint, cost, buyOffset)
-    removeCarbonData()
   } catch (error) {
     console.error('Im in the error loop');
   }
@@ -82,13 +81,11 @@ async function getCarbonData(dep, dest, rt) {
 
 function appendCarbonData(weight, cost, url) {
   let pollutionInfo = `
-  <div id = "carbon-data">
   <h3>Carbon Footprint: ${weight}kg</h3>
   <h3>Offset Cost: $${cost}</h3>
   <a href="${url}">Buy Offset Now!</a>
-  </div>
   `
-  let dataContainer = document.querySelector('#form')
+  let dataContainer = document.querySelector('#carbon-data')
 
   dataContainer.insertAdjacentHTML('beforeend', pollutionInfo)
 }
