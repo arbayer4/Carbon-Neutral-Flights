@@ -92,6 +92,22 @@ form {
   text-align: center;
   align-self: center;
 }
+#error-a {
+  color:rgb(45, 79, 21);
+}
+#error-a:hover {
+  color:blue;
+  text-decoration: underline;
+}
+#carbon-data a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+#loading-circle {
+  height: 30px;
+  width: 30px;
+  border-radius: ;
+}
 .textbox{
   margin: 10px 5px 5px 5px;
 }

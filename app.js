@@ -75,6 +75,7 @@ async function getCarbonData(dep, dest, rt) {
     // console.log(buyOffset)
     appendCarbonData(footprint, cost, buyOffset)
   } catch (error) {
+    appendErrorData()
     console.error('Im in the error loop');
   }
 }
@@ -97,6 +98,16 @@ function removeCarbonData() {
 
   }
   return
+}
+function appendErrorData() {
+  let errorInfo = `
+  <h3>Error, Airport Codes Not Found</h3>
+  <p>Please visit<a id = "error-a"href="https://www.iata.org/en/publications/directories/code-search/">IATA</a>website to find your
+  cities code. </p>
+  `
+  let dataContainer = document.querySelector('#carbon-data')
+  dataContainer.insertAdjacentHTML('beforeend', errorInfo)
+
 }
 function takeOff() {
   let plane = document.querySelector('#plane');
