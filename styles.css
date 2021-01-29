@@ -164,12 +164,19 @@ p image {
   float: right;
   width: 35%;
   height: auto;
+  margin: 10px -10px 10px 10px;
+}
+#graph:hover{
+  width: 100%;
 }
 #nasa {
   float: left;
   width: 50%;
   height: auto;
   margin: 10px 10px 10px -10px;
+}
+#nasa:hover{
+  width: 100%;
 }
 #plane {
   position: relative;
