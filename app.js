@@ -34,7 +34,7 @@ menu.addEventListener('click', (e) => {
   } else {
     x.className = "topnav";
   }
-  
+
 })
 
 async function getCarbonData(dep, dest, rt) {
@@ -110,7 +110,7 @@ function loadingCircle() {
   loading.classList.add("display");
   setTimeout(() => {
     loading.classList.remove("display");
-  }, 5000);
+  }, 15000);
 }
 function removeLoadingCircle() {
   const loading = document.querySelector("#loading-circle");
