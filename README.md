@@ -82,7 +82,7 @@ View [Wireframe Mock-Up](https://wireframe.cc/IM9yaq).
 |JS/CSS Animation|L|4hrs|3hrs|3hrs|
 |Testing, Bug Fixing Etc|M|2hrs|2hrs|2hrs|
 |Second API Call|L|4hrs|3hrs|3hrs|
-| Total | H | 31.5hrs| 22hrs | 0hrs |
+| Total | H | 31.5hrs| 33hrs | 33hrs |
 
 ## Code Snippet
 
