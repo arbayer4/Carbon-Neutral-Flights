@@ -71,17 +71,17 @@ View [Wireframe Mock-Up](https://wireframe.cc/IM9yaq).
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Basic HTML Setup | H | 2hr| 1 |  |
-| API Endpoint exploration | H |3hrs |3.5  |  |
-|PseudoCode Javascript Functions|M|1.5hrs|30min||
-|Initial CSS Styling|H|2hrs|1||
-|JS Code to Access API and Add Dynamic Results|H|3hrs|2hrs||
-|Flexbox|H|3hrs|3hrs||
+| Basic HTML Setup | H | 2hr| 1hr |1hr |
+| API Endpoint exploration | H |3hrs |3.5hrs|3.5hrs  |
+|PseudoCode Javascript Functions|M|1.5hrs|30min|30min|
+|Initial CSS Styling|H|2hrs|1hr|1hr|
+|JS Code to Access API and Add Dynamic Results|H|3hrs|2hrs|2hrs|
+|Flexbox|H|3hrs|3hrs|3hrs|
 |CSS Polishing-Fonts, Colors, Etc|M|4hrs|12hrs|12hrs|
-|Media Query Dynamic Content|M|3hrs|2hrs||
-|JS/CSS Animation|L|4hrs|3hrs||
-|Testing, Bug Fixing Etc|M|2hrs|2hrs||
-|Second API Call|L|4hrs|0|0|
+|Media Query Dynamic Content|M|3hrs|2hrs|2hrs|
+|JS/CSS Animation|L|4hrs|3hrs|3hrs|
+|Testing, Bug Fixing Etc|M|2hrs|2hrs|2hrs|
+|Second API Call|L|4hrs|3hrs|3hrs|
 | Total | H | 31.5hrs| 22hrs | 0hrs |
 
 ## Code Snippet
