@@ -4,6 +4,7 @@
   width: 100%;
   padding: 0;
   margin:0;
+  overflow-x: hidden;
 
 } 
  body {
@@ -21,20 +22,16 @@
   width: 100%;
   background-color: #dda15e;
   z-index: 1;
-  /* text-align: left; */
 }
 .topnav a {
-  /* padding: 10px ; */
   float: left;
   font-size: 20px;
   color: #fefae0;
   background-color: #dda15e;
   display: block;
-  /* padding-top: 10px; */
 }
 .topnav a:hover{
   background-color: #bc6c25;
-  color: black;
 }
 .topnav .icon{
   display: none;
@@ -45,37 +42,17 @@ a {
   text-decoration: none;
 }
 
-/* #flex-container {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-} */
-header {
-  /* height: 600px;
-  /* background-image: url(https://i.imgur.com/3qhBB0p.jpg); */
-  /* background-image: url(https://i.imgur.com/gAImuBO.jpg?1); */
-  /* background-image: url(https://i.imgur.com/WItwaWQ.png);
-  background-repeat: no-repeat;
-  background-size: contain; */ 
-  /* flex-basis: 100%; */
-  /* margin: -22px -25px 10px -10px; */
-}
 h1 {
-  /* color: #495057; */
   color: #bc6c25;
-  /* position: absolute; */
   top: 25px;
   left: 0px;
-  /* width: 100%; */
   text-align: center;
   
 }
 #subheader {
   color:rgb(45, 79, 21);
-  /* position: absolute; */
   width: 100%;
   text-align: center;
-  /* top: 100px; */
   left: 0px;
 }
 #trees {
@@ -160,24 +137,28 @@ p.body {
 p image {
   margin: 25px;
 }
+a.blog-link {
+  text-decoration: underline;
+  padding: 0px;
+}
 #graph {
   float: right;
   width: 35%;
   height: auto;
   margin: 10px -10px 10px 10px;
 }
-#graph:hover{
+/* #graph:hover{
   width: 100%;
-}
+} */
 #nasa {
   float: left;
   width: 50%;
   height: auto;
   margin: 10px 10px 10px -10px;
 }
-#nasa:hover{
+/* #nasa:hover{
   width: 100%;
-}
+} */
 #plane {
   position: relative;
   top: 0px;
@@ -208,6 +189,10 @@ p image {
   margin:0 ;
   
 }
+/* Below are my media queries to make more responsive. A lot of these
+are to change the nav at the top to a hamburger drop down menu which I
+learned at: 
+https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {

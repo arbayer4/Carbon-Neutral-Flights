@@ -17,7 +17,6 @@ form.addEventListener('submit', (e) => {
     removeData()
     appendErrorData()
   } else {
-    console.log("test")
     removeData()
     loadingCircle()
     getCarbonData(depCaps, arrCaps, rt)
@@ -25,17 +24,7 @@ form.addEventListener('submit', (e) => {
   }
 })
 
-const menu = document.querySelector(".icon")
-menu.addEventListener('click', (e) => {
-  e.preventDefault();
-  let x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
 
-})
 
 async function getCarbonData(dep, dest, rt) {
   let oneWay = `&segments[0][origin]=${dep}&segments[0][destination]=${dest}`
@@ -54,20 +43,16 @@ async function getCarbonData(dep, dest, rt) {
       'Access-Control-Allow-Origin': '*'
     }
   }
-  console.log(config.url)
   try {
     let response = await axios(config)
-    // console.log(response.data)
     let footprint = response.data.footprint
-    // console.log(footprint)
     let cost = response.data.offset_prices[0].amount
     cost = (cost / 100).toFixed(2)
-    // console.log(cost)
     let buyOffset = response.data.offset_prices[0].offset_url
-    // console.log(buyOffset)
     removeLoadingCircle()
     appendCarbonData(footprint, cost, buyOffset)
   } catch (error) {
+    removeLoadingCircle()
     appendErrorData()
     console.error(error);
   }
@@ -85,7 +70,6 @@ function appendCarbonData(weight, cost, url) {
 }
 function removeData() {
   let parent = document.querySelector('#carbon-data')
-  // console.log(parent.firstElementChild)
   while (parent.firstElementChild) {
     parent.removeChild(parent.firstElementChild)
 
@@ -102,11 +86,23 @@ function appendErrorData() {
   dataContainer.insertAdjacentHTML('beforeend', errorInfo)
 
 }
+//Below is a click event to make dropdown menu when the hamburger
+//menu is shown on smaller screens. I learned it from:
+//https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+const menu = document.querySelector(".icon")
+menu.addEventListener('click', (e) => {
+  e.preventDefault();
+  let x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+
+})
 //Loading circle code from https://dev.to/vaishnavme/displaying-loading-animation-on-fetch-api-calls-1e5m
 function loadingCircle() {
-  console.log("in loading loop")
   const loading = document.querySelector("#loading-circle");
-  console.log(loading)
   loading.classList.add("display");
   setTimeout(() => {
     loading.classList.remove("display");
@@ -116,6 +112,10 @@ function removeLoadingCircle() {
   const loading = document.querySelector("#loading-circle");
   loading.classList.remove("display")
 }
+
+//Function to make my plane take off. I use the getBoundingClientRect to get
+//the plane coordinates so that the plane movement can be responsive based on
+//screen size. 
 function takeOff() {
   let plane = document.querySelector('#plane');
   let domRect = plane.getBoundingClientRect()
