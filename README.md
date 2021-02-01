@@ -93,23 +93,30 @@ function to be dynamic based on size of the screen.
 function takeOff() {
   let plane = document.querySelector('#plane');
   let domRect = plane.getBoundingClientRect()
-  let bound = window.innerWidth - domRect.left
-  let start = Date.now();
-  let left = 0
+  let bound = window.innerWidth - domRect.left //This is the distance from where the plane starts to the right side of window. Used to change animation once plane exits screen to right. 
+  let start = Date.now();//For intitial time
+  let left = 0 //Since planes postion is relative, start at 
   let top = 0
-  let resetLeft = -domRect.right
-  let resetTop = -50
-  let x = 0
-  let xReset = 0
+  let resetLeft = -domRect.right //Where plane will start on return to screen.
+  let resetTop = -50 //Where plane will start on return to screen.
+  if (window.innerWidth < 500) { //For smaller screens, plane will land more smoothly.
+    resetTop = -25;
+  }
+  let x = 0 //Counter and position incrementer. 
+  let xReset = 0 //For return flight position incrementer. 
+  //This causes the plane to change postion every 20 milliseconds to appear to make a smooth
+  //flight takeoff and landing. 
   let timer = setInterval(() => {
 
-    let timePassed = Date.now() - start;
+    let timePassed = Date.now() - start; //Keep track of total time passed
+    //If 8 seconds have passed or plane is back in postion, reset interval and restore
+    //original position. 
     if (timePassed >= 8000 || resetLeft >= 0) {
       clearInterval(timer);
       plane.style.left = `0px`
       plane.style.top = `0px`
       return;
-    } else if (left > bound) {
+    } else if (left >= bound) { //If plane has exited the right of the screen-start descent from the left. 
       plane.style.left = `${resetLeft += 4}px`
       if (resetTop < 0) {
         plane.style.top = `${resetTop += 1.5 * x ** 2}px`
@@ -117,10 +124,10 @@ function takeOff() {
         plane.style.top = `0px`
       }
       xReset++
-    } else {
-      plane.style.left = `${left += 4}px`
-      if (left > 200) {
-        plane.style.top = `${top -= (3 / 4) * x ** 2}px`
+    } else { //Original takeoff segment. 
+      plane.style.left = `${left += 4}px` //Plane starts with just horizontal movement.
+      if (left > (window.innerWidth / 4)) { //Once it moves 1/4 of the screen horizontally, start an upward path following an exponential curve.
+        plane.style.top = `${top -= (3 / 4) * x ** 2}px` //Exponential curve flattened slightly to make it look more realistic. 
 
       }
     }
@@ -128,6 +135,7 @@ function takeOff() {
   }, 20)
   x++;
 }
+
 
 ```
 
