@@ -1,6 +1,6 @@
 # Project Overview
 
-## The Green Travel Planner
+## The Carbon Neutral Traveler
 
 https://arbayer4.github.io/Carbon-Neutral-Flights/
 
