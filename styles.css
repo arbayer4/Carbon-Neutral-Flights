@@ -143,22 +143,20 @@ a.blog-link {
 }
 #graph {
   float: right;
-  width: 35%;
+  width: 46%;
   height: auto;
   margin: 10px -10px 10px 10px;
 }
-/* #graph:hover{
-  width: 100%;
-} */
+
 #nasa {
   float: left;
-  width: 50%;
+  width: 46%;
   height: auto;
   margin: 10px 10px 10px -10px;
 }
-/* #nasa:hover{
+#nasa:hover{
   width: 100%;
-} */
+}
 #plane {
   position: relative;
   top: 0px;
